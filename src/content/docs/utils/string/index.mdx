@@ -1,0 +1,44 @@
+---
+title: String
+description: Utilities
+---
+
+### 1. First Letter Capitalization and Underscore Replacement
+
+This function, `firstLetterCapitalize`, takes a string `str` as input and performs two main operations:
+
+1. It capitalizes the first letter of the string.
+2. It replaces any underscores (\_) in the string with spaces.
+
+Here is the code for the function:
+
+import { Code } from "@astrojs/starlight/components";
+
+export const code = `
+function firstLetterCapitalize(str) {
+    const modifiedStr = str?.charAt(0)?.toUpperCase() + str?.slice(1);
+    return modifiedStr && modifiedStr?.replace("\_", " ");
+};
+`;
+
+<Code code={code} lang="js" />
+
+### 2. Text Truncation
+
+This function, truncate, shortens a given string text to a specified length. If the length of the input string exceeds the specified length, the function truncates the string and appends an ellipsis (...). If the input string is shorter than or equal to the specified length, it returns the original string unchanged.
+
+Here is the code for the function:
+
+export const truncate = `
+function truncate(text, length) {
+    let str = "";
+    if (text?.length > length) {
+        str = text?.substring(0, length) + "...";
+    } else {
+        str = text;
+    }
+    return str;
+};
+`;
+
+<Code code={truncate} lang="js" />

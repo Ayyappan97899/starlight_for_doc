@@ -1,0 +1,21 @@
+---
+title: Array
+description: Utilities
+---
+
+### 1. Get Unique List by Key from Array of Objects
+
+This function, `getUniqueList`, filters an array of objects `arr` to ensure each object is unique based on a specified key `key`. It first filters the array to include only objects, then it creates a map to store unique objects by their key values. Finally, it returns an array of these unique objects.
+
+Here is the code for the function:
+
+import { Code } from "@astrojs/starlight/components";
+
+export const code = `
+function getUniqueList(arr, key) {
+    let ObjectsArray = arr.filter((item) => isObject(item));
+    return [...new Map(ObjectsArray.map((item) => [item[key], item])).values()];
+}
+`;
+
+<Code code={code} lang="js" />
