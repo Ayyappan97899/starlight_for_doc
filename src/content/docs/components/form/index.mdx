@@ -1,0 +1,76 @@
+---
+title: Inputs
+description: Form Components.
+---
+
+### 1. AppTextField
+
+`AppTextField` is a versatile and reusable input component built with React and MUI. It incorporates validation and dynamic styling to handle various input types and states. This component:
+
+1. Accepts and displays values with support for controlled components.
+2. Provides error handling with visual feedback using `FormHelperText`.
+3. Supports customization through props like `type`, `placeholder`, `label`, `variant`, `color`, and others.
+4. Prevents number field scrolling with the mouse wheel.
+5. Disables input based on loading state or custom conditions.
+6. Ensures flexibility with additional props passed through `...rest`.
+7. For more details and advanced usage, visit the official [MUI Text Field documentation.](https://mui.com/material-ui/react-text-field/)
+
+<iframe
+src="https://stackblitz.com/edit/vitejs-vite-ugxthg?embed=1&file=src%2Fcomponents%2Fform%2FAppTextField.jsx&hideExplorer=1&hideNavigation=1&component=textField"
+width="100%"
+
+style={{
+    height: "500px",
+  }}
+frameborder="0"
+
+> </iframe>
+
+### 2. AppSelectField
+
+The `AppSelectField` component is a custom React component built using MUI (Material-UI) and Lodash libraries. It serves as an enhanced Autocomplete input field designed for selecting and displaying options, often sourced from an API. The component supports features such as debounced search input, custom rendering of options and tags, and handling errors.
+
+#### Key Features:
+
+1. **Autocomplete Integration:** Utilizes MUI's `Autocomplete` for a user-friendly dropdown selection experience.
+2. **Debounced Search:** Implements debounced input handling to optimize performance when querying APIs.
+3. **Customizable Options and Tags:** Allows custom rendering of both options and selected tags using the `renderOption` and `renderTags` props.
+4. **Error Handling:** Displays error messages using MUI's `FormHelperText` when validation errors are present.
+5. **Dynamic API Interaction:** Supports dynamic fetching and displaying of options from an API endpoint.
+6. **Flexible Customization:** Offers extensive customization through props like `label`, `placeholder`, `onChange`, `values`, `errors`, `name`, `apiEndpoint`, `wrapperSx`, `meta`, `params`, `listResponseFormat`, `isDisabled`, `renderOption`, and `apiType`.
+7. For more details and advanced usage, visit the official [MUI Autocomplete Field documentation.](https://mui.com/material-ui/react-autocomplete/)
+
+<iframe
+src="https://stackblitz.com/edit/vitejs-vite-ugxthg?embed=1&file=src%2Fcomponents%2Fform%2FAppSelectField.jsx&hideExplorer=1&hideNavigation=1&component=textField"
+width="100%"
+style={{
+    height: "500px",
+  }}
+frameborder="0"
+
+> </iframe>
+
+### 2. AppMultiSelectField
+
+The `AppMultiSelectField` component is a custom React component that provides an advanced multi-select input field using MUI (Material-UI) and Lodash. This component is designed for scenarios where users need to select multiple items from a dynamically fetched list, often sourced from an API. It includes features such as debounced search input, custom rendering of selected items, and error handling.
+
+#### Key Features:
+
+1. **Multi-Select Capability:** Utilizes MUI's `Autocomplete` to allow multiple item selection with tags.
+2. **Debounced Search:** Implements debounced input handling to enhance performance when querying APIs.
+3. **Customizable Tags:** Supports custom rendering of selected tags using the `renderTags` prop.
+4. **Error Handling:** Displays error messages using MUI's `FormHelperText` when validation errors are present.
+5. **Dynamic Data Fetching:** Fetches options from an API endpoint to populate the dropdown.
+6. **Flexible Customization:** Offers extensive customization through props like `label`, `meta`, `name`, `errors`, `values`, `onChange`, `placeholder`, `isRequired`, `uploadIsLoading`, `wrapperSx`, `isDisabled`, `selectedValues`, `params`, `apiEndpoint`, and `renderOption`.
+7. **Responsive Design:** Designed to be fully responsive with customizable styles using MUI's `sx` prop.
+8. For more details and advanced usage, visit the official [MUI Multi Autocomplete Field documentation.](https://mui.com/material-ui/react-autocomplete/#multiple-values)
+
+<iframe
+src="https://stackblitz.com/edit/vitejs-vite-ugxthg?component=multiSelectField&embed=1&file=src%2Fcomponents%2Fform%2FAppMultiSelectField.jsx&hideExplorer=1&hideNavigation=1"
+width="100%"
+style={{
+    height: "500px",
+  }}
+frameborder="0"
+
+> </iframe>

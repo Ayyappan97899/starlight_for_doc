@@ -11,6 +11,23 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: "CODEBASE",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { label: "Vite+React", link: "/codebase/vite_react" },
+          ],
+        },
+        {
+          label: "COMPONENTS",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            {
+              label: "Form",
+              items: [{ label: "Inputs", link: "/components/form" }],
+            },
+          ],
+        },
+        {
           label: "UTILS",
           items: [
             // Each item here is one entry in the navigation menu.
