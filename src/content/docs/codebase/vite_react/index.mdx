@@ -1,27 +1,70 @@
 ---
-title: Vite + React
+title: Vite + React Js
 description: Basic setup
 ---
 
-Github [Link](https://github.com/Cyces-Innovation-Labs/vite-react_boilerplate)
+#### Getting Started
 
-This codebase has a basic setup. First, clone this repository to your machine and follow these steps:
+To set up this project on your local machine, clone the repository from [GitHub](https://github.com/Cyces-Innovation-Labs/vite-react_boilerplate) and follow these steps:
+
+Remove the existing remote if you have cloned the repository from a different source:
 
 import { Code } from "@astrojs/starlight/components";
+
+export const gitRemoteRemove = `
+git remote remove origin
+`;
+
+<Code code={gitRemoteRemove} lang="js" />
+
+Add your repository as the new origin:
+
+export const gitRemoteAdd = `
+git remote add origin **your repo**
+`;
+
+<Code code={gitRemoteAdd} lang="js" />
+
+Push to your repository:
+
+export const gitPush = `
+git push -u origin main
+`;
+
+<Code code={gitPush} lang="js" />
+
+Install the dependencies:
 
 export const yarnInstall = `
 yarn install
 `;
 
-export const yarnRun = `
-yarn run dev
-`;
-
 <Code code={yarnInstall} lang="js" />
+Run the development server:
+
+export const yarnRun = `yarn run dev`;
 
 <Code code={yarnRun} lang="js" />
 
+###### Installed Libraries:
+
+• **Axios**: Axios is a popular promise-based HTTP client for making HTTP requests in the browser. For more information, visit the [Axios documentation](https://axios-http.com/docs/intro).
+
+• **Zustand**: Zustand is a small, fast, and scalable state management library for React applications, offering a straightforward API for managing application state. For more information, visit the [Zustand documentation](https://docs.pmnd.rs/zustand/getting-started/introduction).
+
+###### Mandatory Libraries:
+
+• **Material-UI (MUI)**: MUI offers a comprehensive set of UI components that are highly customizable and easy to use. For more information, visit the [MUI documentation](https://mui.com/material-ui/getting-started/).
+
+Note: Some UI designs may reference other UI libraries. Refer to those specific libraries if mentioned; otherwise, default to using MUI for the project's UI needs.
+
+• **React Helmet**: React Helmet is a reusable React component that manages changes to the document head. It enables adding meta tags, link tags, and scripts to the application's HTML head section. For more information, visit the [React Helmet documentation](https://github.com/nfl/react-helmet#readme).
+
+• **React Query**: React Query is a data fetching and caching library for React applications. It provides tools for managing asynchronous data fetching and synchronization with the UI state. For more information, visit the [React Query documentation](https://tanstack.com/query/latest/docs/framework/react/overview).
+
 ###### Code Quality Tools:
+
+This project uses the following tools to ensure code quality:
 
 1. **ESLint**: Throws errors for issues like unused variables, syntax errors, and code format problems.
 2. **Prettier**: Formats the code.
@@ -49,6 +92,6 @@ yarn run dev
 
 • **routes**: Define routes based on the pages, e.g., Home routes. This folder helps manage the navigation structure and provides examples of how to set up routes.
 
-• **store**: Create global state management using the Zustand library. This folder contains state management logic that can be accessed and updated from anywhere in the application. For more details, check this [link](https://docs.pmnd.rs/zustand/getting-started/introduction).
+• **store**: Create global state management using the Zustand library. This folder contains state management logic that can be accessed and updated from anywhere in the application.
 
 • **utils**: Create common utility functions that can be used across different parts of the application, promoting code reuse and reducing redundancy.
